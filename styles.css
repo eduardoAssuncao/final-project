@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --cor-primaria: #FF577F;
+    --cor-secundaria: #F6F6F6;
+
+    --fonte-primaria: "Do Hyeon", sans-serif;
+    --fonte-secundaria: "Lato", sans-serif;
+;}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: rgb(41, 41, 41);
+}
+
+/*CSS REFERENTE AO BACKGROUND DA PÁGINA HOME*/
+.portfolio::before {
+    content: ""; /*propriedade obrigatoria quando usado ::before ou ::after*/
+    position: absolute; /*nos permitir deixar ele do mesmo tamanho do elemento .portfolio e deixar o texto sobreposto*/
+    inset: 0; /*equivale à top: 0; right: 0; bottom: 0; left: 0 para o tamanho da imagem*/
+    background-image: url("Código\ 1.png");
+    background-size: cover; /*para fazer com que a imagem ocupe toda a área sem distorcer e sem repetir*/
+    background-position: bottom;
+    z-index: -1; /*pra forçar a imagem a ir "pra baixo" do texto*/
+    opacity: 0.1;
+}
+
+/*CSS REFERENTE AO NAVEGATION DA PÁGINA HOME*/
+.portfolio__header__nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.portfolio__header__nav__icon {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+[data-context="underline"] {
+    border-bottom:.2rem solid var(--cor-primaria);
+}
+
+.icon__nav {
+    width: 20px;
+}
+
+.text__nav {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
+    font-size: 24px;
+}
+
+/*CSS REFERENTE AO CONTEÚDO PRINCIPAL DA PÁGINA HOME*/
+span {
+    color: var(--cor-primaria);
+}
+
+.portfolio__main {
+    display: flex;
+    gap: 13rem;
+}
+
+.portfolio__main__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    margin: 8rem 0rem 0rem 8rem;
+    justify-content: space-around;
+    color: var(--cor-secundaria);
+    width: 60%;
+}
+
+.portfolio__main__content__text__title {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+.portfolio__main__content__text__info {
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    text-align:left;
+}
+
+/*CSS REFERENTE AOS LINKS DA PÁGINA HOME*/
+.portfolio__main__content__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+    align-items: center;
+}
+
+.portfolio__main__content__links__title {
+    font-family: var(--fonte-primaria);
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.portfolio__main__content__links__link {
+    border: .13rem solid var(--cor-primaria);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 75%;
+    
+}
+
+.icon__text__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    margin: .8rem .0rem;
+    gap: .5rem;
+}
+
+.text__link {
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+}
+
+.portfolio__main__content__links__project {
+    display: flex;
+    gap: 2rem;
+    margin: 4rem 10rem 0 0;
+}
+
+.portfolio__main__content__links__link__project {
+    border: .13rem solid var(--cor-primaria);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 75%;
+}
+
+/*CSS REFERENTE A IMAGEM DA PAGINA HOME*/
+.portfolio__main__image {
+    display: flex;
+    margin: 8rem 8rem 0rem 2rem;
+    gap: 2rem;
+}
+
+.portfolio__main__image__project {
+    display: flex;
+    margin: 8rem 8rem 0rem 2rem;
+    gap: 2rem;
+}
+
+.portfolio__image {
+    max-width: 400px;
+    max-height: 450px;
+    border-radius: 4%;
+}
+
+.portfolio__image__border {
+    position: absolute;
+    z-index: -1;
+    width: 375px;
+    height: 430px;
+    border: .3rem solid var(--cor-primaria);
+    border-radius: 4%;
+    margin: -1rem 0rem 0rem 2rem;
+}
+
+.portfolio__image__include {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.portfolio__image__include__border {
+    position: absolute;
+    z-index: -1;
+    width: 340px;
+    height: 340px;
+    box-shadow: -1rem 4rem .5rem 20px var(--cor-primaria);
+    border-radius:50%;
+    margin: -1rem 0rem 0rem 2rem;
+}
+
+.portfolio__image__include__portfolio {
+    max-width: 320px;
+    max-height: 320px;
+}
+
+.portfolio__image__include__border__portfolio {
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 200px;
+    border: .3rem solid var(--cor-primaria);
+    border-radius: 4%;
+    margin: -12.7rem 0rem 0rem 1.4rem;
+}
+
+/*CSS REFERENTE AO FOOTER DA PAGINA HOME*/
+.footer__line {
+    margin: 5rem 0 1.5rem 0;
+    border: .1rem solid var(--cor-primaria);
+    opacity: 30%;
+}
+
+.portfolio__footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__image {
+    width: 7%;
+    align-self: center  ;
+    margin-bottom: 1.5rem;
+}   
+
+.footer__text {
+    align-self: center;
+    font-family: var(--fonte-secundaria);
+    color: #B9B9B9;
+    font-weight: 36;
+    font-size: 13px;
+}
+
+/*@media only screen and (max-width: 768px)*/@media (max-width: 1092px) {
+    
+    
+
+
+    .portfolio__main {
+      flex-direction: column-reverse;
+      gap: 5rem;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .portfolio__header__nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .portfolio__main__content {
+        justify-content: center;
+        margin-top: 0rem;
+        margin: 2rem 0rem 0rem 0rem;
+        justify-content: space-around;
+        color: var(--cor-secundaria);
+        width: 60%;
+        gap: 2rem;
+    }
+
+    .portfolio__main__image {
+        justify-content: center;
+        margin: 5rem 0 0 0;
+    }
+    
+    .portfolio__image {
+        max-width: 400px;
+        max-height: 450px;
+        border-radius: 4%;
+    }
+    
+    .portfolio__image__border {
+        position: absolute;
+        z-index: -1;
+        width: 375px;
+        height: 430px;
+        border: .3rem solid var(--cor-primaria);
+        border-radius: 4%;
+        margin: -1rem 0rem 0rem 2rem;
+    }
+
+    .portfolio__main__image__project {
+        flex-direction: column;
+        margin: 0rem 0rem 0rem 0rem;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .footer__image {
+        width: 12%;
+        align-self: center  ;
+        margin-bottom: 1rem;
+    }   
+
+}

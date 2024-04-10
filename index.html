@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="Home.png" type="image/x-icon">
+    <title>Home</title>
     <script src="script.js" defer></script>
 </head>
 <body class="portfolio">
     <header class="portfolio__header">
+        <button onclick="myFunction()"><img class="dark__mode__icon" src="light-mode.png" alt="Dark mode icon"></button>
         <nav class="portfolio__header__nav">
             <div class="portfolio__header__nav__icons">
                 <div data-context="underline" class="portfolio__header__nav__icon">
@@ -36,7 +38,7 @@
     <main class="portfolio__main">
         <section class="portfolio__main__content">
             <div class="portfolio__main__content__text">
-                <h1 class="portfolio__main__content__text__title">Eduardo <span>Assunção</span></h1>
+                <h1 class="portfolio__main__content__text__title" id="nome__autor">Eduardo <span>Assunção</span></h1>
                 <p class="portfolio__main__content__text__info">Olá! Sou o Kenny! Vivamus urna nisi, lobortis ut euismod in, sollicitudin ac ipsum. Mauris a libero id velit pulvinar scelerisque at quis magna. Aliquam erat volutpat.</p>
             </div>
 

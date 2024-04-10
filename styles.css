@@ -4,6 +4,10 @@
 :root {
     --cor-primaria: #FF577F;
     --cor-secundaria: #F6F6F6;
+    --cor-background: rgb(41, 41, 41);
+    --cor-footer-text: #B9B9B9;
+
+    --opacity-background: 0.1;
 
     --fonte-primaria: "Do Hyeon", sans-serif;
     --fonte-secundaria: "Lato", sans-serif;
@@ -16,7 +20,28 @@
 
 body {
     box-sizing: border-box;
-    background-color: rgb(41, 41, 41);
+    background-color: var(--cor-background)
+}
+
+.dark-mode {
+    --cor-primaria: #FF577F;
+    --cor-secundaria: #1a1a1a;
+    --cor-background: rgb(179, 179, 179);
+    --cor-footer-text: #1a1a1a;
+    --opacity-background: .2;
+}
+
+.dark__mode__icon {
+    max-width: 20px;
+}
+
+button {
+    display: flex;
+    margin: .5rem 0 0 2rem;
+    border-radius: 50%;
+    max-width: 30px;
+    max-height: 30px;
+    background-color: #ffffff;
 }
 
 /*CSS REFERENTE AO BACKGROUND DA PÁGINA HOME*/
@@ -28,7 +53,7 @@ body {
     background-size: cover; /*para fazer com que a imagem ocupe toda a área sem distorcer e sem repetir*/
     background-position: bottom;
     z-index: -1; /*pra forçar a imagem a ir "pra baixo" do texto*/
-    opacity: 0.1;
+    opacity: var(--opacity-background);
 }
 
 /*CSS REFERENTE AO NAVEGATION DA PÁGINA HOME*/
@@ -85,6 +110,60 @@ span {
     color: var(--cor-secundaria);
     font-size: 36px;
     margin-bottom: 2rem;
+    overflow: hidden;
+    animation: type 2s steps(60, end);
+}
+
+.portfolio__main__content__text__title:nth-child(2){
+    animation: type2 8s steps(60, end);
+
+}
+
+@keyframes type{ 
+    from { opacity: 0; } 
+  } 
+  
+@keyframes type2{
+    0% { 
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100; 
+    } 
+} 
+
+#nome__autor::after {
+    content: "👓";
+    animation: piscar 1s infinite;
+}
+
+#habilidades::after {
+    content: "🎮";
+    animation: piscar 1s infinite;
+}
+
+#projetos::after {
+    content: "💻";
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .portfolio__main__content__text__info {
@@ -225,7 +304,7 @@ span {
 .footer__text {
     align-self: center;
     font-family: var(--fonte-secundaria);
-    color: #B9B9B9;
+    color: var(--cor-footer-text);
     font-weight: 36;
     font-size: 13px;
 }
@@ -245,7 +324,7 @@ span {
     .portfolio__header__nav {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
         margin-top: 2.5rem;
     }
 
@@ -255,7 +334,7 @@ span {
         margin: 2rem 0rem 0rem 0rem;
         justify-content: space-around;
         color: var(--cor-secundaria);
-        width: 60%;
+        width: 80%;
         gap: 2rem;
     }
 

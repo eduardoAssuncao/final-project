@@ -3,6 +3,7 @@
 
 :root {
     --cor-primaria: #FF577F;
+    --cor-primariaspan: #FF577F;
     --cor-secundaria: #F6F6F6;
     --cor-background: rgb(41, 41, 41);
     --cor-footer-text: #B9B9B9;
@@ -24,14 +25,37 @@ body {
 }
 
 .dark-mode {
-    --cor-primaria: #FF577F;
+    /*--cor-primaria: #FF577F;
     --cor-secundaria: #1a1a1a;
     --cor-background: rgb(179, 179, 179);
     --cor-footer-text: #1a1a1a;
+    --opacity-background: .2;*/
+    --cor-primaria: #FF9494;
+    --cor-secundaria: #FF9494;
+    --cor-background: #FFF5E4;
+    --cor-footer-text: #1a1a1a;
+    --cor-primariaspan: #393E46;
     --opacity-background: .2;
+
+}
+
+.light-mode {
+    --cor-primaria: #FF577F;
+    --cor-primariaspan: #FF577F;
+    --cor-secundaria: #F6F6F6;
+    --cor-background: rgb(41, 41, 41);
+    --cor-footer-text: #B9B9B9;
+}
+
+.button__color {
+    display: flex;
 }
 
 .dark__mode__icon {
+    max-width: 20px;
+}
+
+.light__mode__icon {
     max-width: 20px;
 }
 
@@ -87,7 +111,7 @@ button {
 
 /*CSS REFERENTE AO CONTEÚDO PRINCIPAL DA PÁGINA HOME*/
 span {
-    color: var(--cor-primaria);
+    color: var(--cor-primariaspan);
 }
 
 .portfolio__main {
@@ -307,6 +331,7 @@ span {
     color: var(--cor-footer-text);
     font-weight: 36;
     font-size: 13px;
+    margin-bottom: .5rem;
 }
 
 /*@media only screen and (max-width: 768px)*/@media (max-width: 1092px) {

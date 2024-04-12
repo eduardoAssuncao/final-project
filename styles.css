@@ -8,6 +8,8 @@
     --cor-background: rgb(41, 41, 41);
     --cor-footer-text: #B9B9B9;
 
+    --button-color:var(--cor-primaria);
+
     --opacity-background: 0.1;
 
     --fonte-primaria: "Do Hyeon", sans-serif;
@@ -35,8 +37,9 @@ body {
     --cor-background: #FFF5E4;
     --cor-footer-text: #1a1a1a;
     --cor-primariaspan: #393E46;
+    --button-color: #B9B9B9;
     --opacity-background: .2;
-
+    
 }
 
 .light-mode {
@@ -45,6 +48,7 @@ body {
     --cor-secundaria: #F6F6F6;
     --cor-background: rgb(41, 41, 41);
     --cor-footer-text: #B9B9B9;
+    --button-color: #FF9494;
 }
 
 .button__color {
@@ -53,10 +57,14 @@ body {
 
 .dark__mode__icon {
     max-width: 20px;
+    background-color: var(--button-color);
+    border-radius: 50%;
 }
 
 .light__mode__icon {
     max-width: 20px;
+    background-color: var(--button-color);
+    border-radius: 50%;
 }
 
 button {
@@ -193,7 +201,7 @@ span {
 .portfolio__main__content__text__info {
     font-family: var(--fonte-secundaria);
     font-size: 24px;
-    text-align:left;
+    text-align:justify;
 }
 
 /*CSS REFERENTE AOS LINKS DA PÁGINA HOME*/
